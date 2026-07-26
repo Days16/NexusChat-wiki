@@ -16,34 +16,47 @@ nav_order: 2
 
 ## Requisitos
 
-| Componente | Versión mínima |
+| Componente | Versión |
 |---|---|
-| Minecraft | 1.21.11 |
-| Fabric Loader | 0.18.2 |
-| Fabric API | 0.139.5+1.21.11 |
+| Minecraft | `26.1.2` **o** `26.2` (`26.2` equivale a `1.21.11`) |
+| Fabric Loader | 0.18.2 o superior |
+| Fabric API | la correspondiente a tu versión de Minecraft |
 | Java | 21 |
 
 NexusChat es **client-side**: solo hace falta instalarlo en tu launcher, no en
 el servidor al que te conectas.
 
-## Paso a paso
+## Opción recomendada: Modrinth
+
+La forma más sencilla de instalar NexusChat es desde su página oficial en
+Modrinth:
+
+**[modrinth.com/mod/nexuschat](https://modrinth.com/mod/nexuschat)**
+
+Elige el archivo correspondiente a tu versión de Minecraft (`26.1.2` o
+`26.2`) y tu launcher (o gestor de mods) lo instalará junto con sus
+dependencias.
+
+## Instalación manual
 
 1. Instala **Fabric Loader** para tu versión de Minecraft (desde el
    instalador oficial de Fabric).
-2. Descarga **Fabric API** y colócalo en tu carpeta `mods/`.
-3. Copia el `.jar` de NexusChat (`nexuschat-<version>.jar`) en la misma
-   carpeta `mods/`.
+2. Descarga **Fabric API** para esa misma versión y colócalo en tu carpeta
+   `mods/`.
+3. Copia el `.jar` de NexusChat (descargado de Modrinth o compilado tú
+   mismo) en la misma carpeta `mods/`.
 4. Arranca Minecraft con el perfil de Fabric. Al entrar a un mundo, NexusChat
    genera automáticamente `config/nexuschat/config.json` con los valores por
    defecto.
 
 ## Compilar desde el código fuente
 
-Si prefieres compilar el `.jar` tú mismo:
+Si prefieres compilar el `.jar` tú mismo, el repositorio del mod tiene una
+carpeta por versión de Minecraft soportada (`NexusChat-26` para `26.1.2`,
+`NexusChat-26.2` para `26.2`/`1.21.11`):
 
 ```powershell
-git clone <url-del-repo-del-mod>
-cd NexusChat-26.2
+cd NexusChat-26.2   # o NexusChat-26 para la versión 26.1.2
 ./gradlew.bat build --console=plain
 ```
 

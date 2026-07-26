@@ -8,10 +8,11 @@ permalink: /
 # NexusChat
 {: .fs-9 }
 
-Overlay de chat multi-plataforma para Minecraft (Fabric 1.21.11) que unifica **Twitch, Kick, YouTube y TikTok** en un solo HUD dentro del juego.
+Overlay de chat multi-plataforma para Minecraft (Fabric) que unifica **Twitch, Kick, YouTube y TikTok** en un solo HUD dentro del juego.
 {: .fs-6 .fw-300 }
 
-[Instalación](instalacion.html){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Descargar en Modrinth](https://modrinth.com/mod/nexuschat){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Instalación](instalacion.html){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Configuración](configuracion.html){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
@@ -46,15 +47,20 @@ servidor al que te conectas tenga el mod instalado.
 
 | | |
 |---|---|
-| Minecraft | 1.21.11 |
+| Minecraft | `26.1.2` y `26.2` (`26.2` = `1.21.11`) |
 | Fabric Loader | ≥ 0.18.2 |
-| Fabric API | 0.139.5+1.21.11 |
+| Fabric API | según versión — ver [Modrinth](https://modrinth.com/mod/nexuschat) para la matriz exacta |
 | Java | 21 |
 
 ## Empezar
 
-1. [Instala el mod](instalacion.html).
+1. [Descarga el mod en Modrinth](https://modrinth.com/mod/nexuschat) o [instálalo desde código fuente](instalacion.html).
 2. Conecta tus plataformas desde [Configuración](configuracion.html) o con `/conectar <plataforma>`.
 3. Pulsa **M** en el juego para mostrar/ocultar el overlay.
 
 ¿Algo no funciona? Revisa [Troubleshooting](troubleshooting.html).
+
+{: .tip }
+> Dentro de la pantalla de configuración (`/nexuschat`) hay un botón **[W]**
+> junto al de Modo Streamer, arriba a la derecha, que abre esta wiki
+> directamente en tu navegador.

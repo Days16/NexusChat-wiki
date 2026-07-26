@@ -44,13 +44,15 @@ del proyecto, que en algunos puntos había quedado desactualizada).
   embebido propio como fallback.
 - Modo streamer (oculta tokens/cookies en las pantallas de configuración).
 - Accesibilidad: `reduceMotion`, tema de alto contraste, "solo menciones".
+- **Publicado en [Modrinth](https://modrinth.com/mod/nexuschat)**, con builds
+  para Minecraft `26.1.2` y `26.2` (`1.21.11`).
 
 ## ⏳ Pendiente / en evaluación
 
 - Acciones de moderación nativas para Kick, YouTube y TikTok (por ahora solo
   Twitch expone una API de moderación directa).
 - Reconocimiento de voz / accesibilidad ampliada (lector de pantalla).
-- Empaquetado y publicación oficial (Modrinth/CurseForge).
+- Publicación en CurseForge.
 
 {: .note }
 > Este roadmap se genera comparando el código fuente real contra la

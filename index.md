@@ -1,0 +1,60 @@
+---
+title: Inicio
+nav_order: 1
+description: "NexusChat — overlay de chat multi-plataforma para Minecraft"
+permalink: /
+---
+
+# NexusChat
+{: .fs-9 }
+
+Overlay de chat multi-plataforma para Minecraft (Fabric 1.21.11) que unifica **Twitch, Kick, YouTube y TikTok** en un solo HUD dentro del juego.
+{: .fs-6 .fw-300 }
+
+[Instalación](instalacion.html){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Configuración](configuracion.html){: .btn .fs-5 .mb-4 .mb-md-0 }
+
+---
+
+## ¿Qué es NexusChat?
+
+NexusChat es un mod **client-side** para Fabric que muestra el chat de tus
+plataformas de streaming favoritas directamente sobre la pantalla del juego,
+sin necesidad de una segunda pantalla ni ventana externa. No requiere que el
+servidor al que te conectas tenga el mod instalado.
+
+## Características principales
+
+- **Chat unificado** de Twitch, Kick, YouTube y TikTok (vía EulerStream) en un solo overlay.
+- **Emotes animados**: Twitch, 7TV (global y por canal, con *zero-width overlays*), BTTV, FFZ, y emojis Unicode vía Twemoji — todo empaquetado en un atlas 2D por textura GL para rendimiento.
+- **Caché en disco** de texturas (TTL configurable) para no re-descargar en cada arranque.
+- **Badges e insignias** oficiales de cada plataforma, avatares cargados de forma asíncrona.
+- **Text-to-Speech**: lee menciones o todo el chat en voz alta, con comando `!tts` configurable por plataforma y por rol (mod/VIP/sub). Ver [Text-to-Speech](tts.html).
+- **Menú de moderación**: clic derecho sobre un nombre en el overlay para hacer timeout, ban, borrar mensaje, VIP o mod (Twitch, vía Helix API). Ver [Moderación](moderacion.html).
+- **Integración con OBS** vía OBS-WebSocket: cambia de escena desde el chat con un comando (`!escena`). Ver [OBS](obs.html).
+- **Modos de visualización**: `FULL`, `COMPACT`, `MINIMAL`.
+- **7 temas de color** (incluye un tema de alto contraste para accesibilidad) y colores de fondo por rol (streamer, mod, VIP, sub).
+- **Menciones resaltadas**, notificaciones de sub/donación con sonido configurable.
+- **Listas negras** de palabras y usuarios, throttle por usuario, colapso de duplicados.
+- **Perfiles de overlay** intercambiables y overrides de configuración por plataforma.
+- **Historial y exportación** de chat a fichero de texto, con export continuo opcional.
+- **Envío de mensajes** al chat de la plataforma desde dentro del juego.
+- **Modo streamer**: oculta tokens y datos sensibles en las pantallas de configuración mientras compartes pantalla.
+- **Hot-reload** de la configuración: edita el JSON con el juego abierto y los cambios se aplican al vuelo.
+
+## Stack técnico
+
+| | |
+|---|---|
+| Minecraft | 1.21.11 |
+| Fabric Loader | ≥ 0.18.2 |
+| Fabric API | 0.139.5+1.21.11 |
+| Java | 21 |
+
+## Empezar
+
+1. [Instala el mod](instalacion.html).
+2. Conecta tus plataformas desde [Configuración](configuracion.html) o con `/conectar <plataforma>`.
+3. Pulsa **M** en el juego para mostrar/ocultar el overlay.
+
+¿Algo no funciona? Revisa [Troubleshooting](troubleshooting.html).

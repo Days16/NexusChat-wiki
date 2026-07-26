@@ -1,0 +1,34 @@
+title: NexusChat Wiki
+description: Documentación completa del mod NexusChat para Minecraft (Fabric)
+lang: es
+
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+color_scheme: dark
+search_enabled: true
+heading_anchors: true
+
+nav_sort: case_sensitive
+
+back_to_top: true
+back_to_top_text: "Volver arriba"
+
+footer_content: "NexusChat — mod client-side para Minecraft (Fabric 1.21.11)."
+
+callouts:
+  warning:
+    title: Atención
+    color: red
+  note:
+    title: Nota
+    color: blue
+  tip:
+    title: Consejo
+    color: green
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

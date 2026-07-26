@@ -48,8 +48,11 @@ También puedes editar casi todo desde dentro del juego con **N** / `/nexuschat`
   "kick":                { /* config Kick */ },
   "tiktok":              { /* config TikTok / EulerStream */ },
   "obs":                 { /* integración OBS-WebSocket */ },
+  "streamlabs":          { /* puente de alertas Streamlabs */ },
+  "streamElements":      { /* puente de alertas StreamElements */ },
   "specialUsers":        [ /* usuarios destacados */ ],
   "wantedUsers":         [ /* usuarios con alerta especial */ ],
+  "teamUsers":           [ /* "Solo mi equipo": usuarios de confianza */ ],
   "zeresGroup":          { /* etiqueta/badge del grupo de specialUsers */ },
   "wantedGroup":         { /* etiqueta/badge del grupo de wantedUsers */ },
   "blockedWords":        [ /* palabras filtradas */ ],
@@ -104,6 +107,9 @@ Controla **cómo** se ve y se comporta el chat en pantalla.
 | `roleEnabledBroadcaster` / `...Moderator` / `...Vip` / `...Subscriber` | `bool` | `true` | Activa/desactiva el tinte por rol individualmente. |
 | `reduceMotion` | `bool` | `false` | Desactiva animaciones (slide-in, spinner) para sensibilidad vestibular o equipos modestos. |
 | `onlyMentions` | `bool` | `false` | Solo muestra mensajes que sean menciones (a ti o al streamer). |
+| `onlyTeam` | `bool` | `false` | Solo muestra mensajes de usuarios en `teamUsers` ("Solo mi equipo"). |
+| `hypeThresholdPerMin` | `int` | `0` | Mensajes por minuto a partir de los cuales se dispara el indicador de hype/raid. `0` = desactivado. |
+| `ttsBlockedWords` | `List<String>` | `[]` | Palabras que, si aparecen en un mensaje, hacen que el TTS no lo lea (independiente de la lista negra general). |
 | `showStreamPreview` / `streamPreviewWidth` | `bool` / `int` | `false` / `160` | Miniatura del stream en directo sobre el overlay (refresco cada 10s). |
 | `continuousExport` | `bool` | `false` | Añade cada mensaje recibido a `live.jsonl` en la carpeta de transcripciones, en tiempo real. |
 | `ttsEnabled`, `ttsCommandEnabled`, `ttsReadAuthor`, `ttsAllowAll/Mod/Vip/Sub`, `ttsAllowedUsers`, `ttsVolume`, `ttsPitch`, `ttsRate`, `ttsVoice`, `ttsGapSeconds`, `ttsMode<Plataforma>` | — | — | Ver [Text-to-Speech](tts.html). |
@@ -176,6 +182,17 @@ cómo conseguir la API Key.
 
 Ver [OBS](obs.html) para más detalle.
 
+## Secciones `streamlabs` / `streamElements`
+
+| Campo | Descripción |
+|---|---|
+| `streamlabs.enabled` | `true` para conectar con Streamlabs al arrancar. |
+| `streamlabs.token` | Socket API Token de Streamlabs (Settings → API Tokens). Se cifra en disco. |
+| `streamElements.enabled` | `true` para conectar con StreamElements al arrancar. |
+| `streamElements.jwtToken` | JWT Token de StreamElements (Account → Show secrets). Se cifra en disco. |
+
+Ver [Alertas Streamlabs/StreamElements](alertas.html) para más detalle.
+
 ---
 
 ## `specialUsers` / `wantedUsers`
@@ -197,6 +214,13 @@ Cada uno es un array de objetos `SpecialUser`:
 
 Se gestionan desde la pantalla **Usuarios especiales** dentro de la config
 del mod, sin necesidad de editar el JSON a mano.
+
+## `teamUsers` ("Solo mi equipo")
+
+Mismo formato `SpecialUser` que `specialUsers`/`wantedUsers`, pero usado
+solo cuando `overlay.onlyTeam=true`: en ese modo, el overlay oculta cualquier
+mensaje de un autor que no esté en esta lista. Se gestiona desde la pantalla
+**Equipo** dentro de la config del mod.
 
 ## Listas negras
 

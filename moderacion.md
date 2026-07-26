@@ -31,14 +31,23 @@ mientras moderas.
 | Acción | Efecto |
 |---|---|
 | Timeout 60s / 10m / 1h | Silencia al usuario ese tiempo. |
-| Ban | Banea permanentemente al usuario del canal. |
+| Ban | Banea permanentemente al usuario del canal. Requiere **doble clic**: el primer clic "arma" el botón (y se desarma solo si no confirmas enseguida), el segundo lo ejecuta — pensado para evitar bans accidentales. |
 | Eliminar mensaje | Borra ese mensaje concreto del chat de Twitch. |
 | VIP | Otorga el rol VIP al usuario. |
 | Mod | Otorga el rol de moderador al usuario. |
+| 🚫 Ignorar | Añade al usuario a `blockedUsers` (lista negra local) sin salir del overlay — no requiere Helix ni token. |
 
-Todas las acciones se ejecutan vía la **API Helix de Twitch**
-(`TwitchModActions`) en un hilo de I/O, y el popup muestra el resultado
-(✓ éxito / ✗ error) sin bloquear el juego.
+Todas las acciones vía Helix se ejecutan en un hilo de I/O
+(`TwitchModActions`), y el popup muestra el resultado (✓ éxito / ✗ error) sin
+bloquear el juego. **Ignorar** es puramente local y funciona siempre, incluso
+sin token OAuth.
+
+{: .note }
+> Si sigues varios canales de Twitch a la vez (ver
+> [multi-canal por plataforma](novedades-1.0-beta.html#overlay-y-chat-en-directo)),
+> los mensajes de canales adicionales aparecen como **restringidos** en este
+> menú: algunas acciones de moderación solo tienen sentido sobre el canal
+> principal configurado en `twitch.channelName`.
 
 ### Requisito: token OAuth
 

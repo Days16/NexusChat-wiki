@@ -42,6 +42,17 @@ desde las pantallas de `/nexuschat <plataforma>`.
     en `127.0.0.1:7654` y tu navegador para autorizar la app.
   - Sin token configurado, la conexión es de solo lectura.
 
+### Multi-canal por plataforma
+
+Además del canal principal (`twitch.channelName`), puedes seguir canales de
+Twitch adicionales listando sus nombres en `twitch.extraChannelNames`
+(editable desde la pantalla **Twitch** de la config, campo de texto separado
+por comas). Los mensajes de esos canales extra se muestran con un prefijo
+`[canal]` en el overlay y quedan marcados como **restringidos** en el
+[menú de moderación](moderacion.html) (algunas acciones solo aplican al canal
+principal). Útil para raids/colabs donde quieres ver varios chats a la vez
+sin cambiar de canal.
+
 ## Kick
 
 - **Transporte**: WebSocket Pusher (`ws-us2.pusher.com`).

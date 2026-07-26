@@ -39,7 +39,14 @@ del proyecto, que en algunos puntos había quedado desactualizada).
 - **Menú de moderación** in-overlay (timeout / ban / borrar mensaje / VIP /
   mod) vía Twitch Helix API, con clic derecho sobre el nombre.
 - **Integración con OBS-WebSocket** (cambio de escena desde el chat).
+- **Puente de alertas Streamlabs/StreamElements** para donaciones sin
+  equivalente nativo en el chat. Ver [Alertas](alertas.html).
 - **Miniatura de stream en directo** sobre el overlay.
+- Encuestas y predicciones de Twitch en el overlay, indicador de hype/raid,
+  modo "Solo mi equipo", multi-canal por plataforma, reintentos con backoff
+  visibles, marcador de mensajes nuevos, vista previa de emote,
+  confirmación antes de banear, cifrado de credenciales en disco. Ver
+  [Novedades 1.0 beta](novedades-1.0-beta.html) para el detalle completo.
 - OAuth de Twitch: Device Code Flow + Authorization Code con PKCE, Client ID
   embebido propio como fallback.
 - Modo streamer (oculta tokens/cookies en las pantallas de configuración).

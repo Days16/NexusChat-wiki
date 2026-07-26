@@ -46,13 +46,19 @@ simular eventos sin depender de la plataforma real):
 | `/nexuschat simulate chat` | Inyecta un mensaje de chat de prueba con un emote. |
 | `/nexuschat simulate reward` | Inyecta una recompensa de canal de prueba. |
 | `/nexuschat simulate sub` | Inyecta una suscripción de prueba. |
+| `/nexuschat simulate donation` | Inyecta una donación de prueba. |
+| `/nexuschat simulate poll` | Muestra una encuesta de Twitch de prueba en el overlay. |
+| `/nexuschat simulate prediction` | Muestra una predicción de Twitch de prueba en el overlay. |
+| `/nexuschat simulate hype` | Dispara el indicador de hype/raid como si el chat se hubiera acelerado. |
 | `/nexuschat profile list` | Lista los perfiles de overlay disponibles y cuál está activo. |
 | `/nexuschat profile <nombre>` | Cambia al perfil de overlay indicado. |
 
 {: .tip }
 > También existe una pantalla **Sesión de Prueba** (`SimulationScreen`)
 > dentro de la config del mod que hace lo mismo que `simulate` pero con
-> botones, sin tener que escribir el comando.
+> botones, sin tener que escribir el comando: columna izquierda para
+> Sub/Donación/Recompensa/Chat, columna derecha para Encuesta/Predicción/
+> Hype/Canal extra (multi-canal por plataforma).
 
 ---
 

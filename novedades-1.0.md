@@ -36,10 +36,11 @@ nav_order: 1.5
   encuesta o predicción activa en tu canal, aparece una barra con las
   opciones y porcentajes directamente sobre el HUD, con un breve fade al
   cerrarse. Sondeo automático cada 30s (`TwitchPollPoller`).
-- **Posición de la encuesta/predicción configurable**: ya no queda fija
-  pegada encima del chat — tiene su propia posición (`pollX`/`pollY`) que se
-  arrastra desde una pantalla dedicada (buscador de `/nexuschat`, palabra
-  clave "poll"/"encuesta"). Ver [Configuración → sección `overlay`](configuracion.html#sección-overlay).
+- **Posición y ancho de la encuesta/predicción configurables**: ya no queda
+  fija pegada encima del chat ni comparte el ancho del chat — tiene su propia
+  posición y tamaño (`pollX`/`pollY`/`pollWidth`) que se ajustan desde una
+  pantalla dedicada (buscador de `/nexuschat`, palabra clave "poll"/"encuesta").
+  Ver [Configuración → sección `overlay`](configuracion.html#sección-overlay).
 - **Comando `/nexuschat poll dismiss`**: quita manualmente del overlay la
   encuesta o predicción visible en ese momento. Si sigue activa en Twitch, no
   reaparece hasta que cambie de título (empiece una encuesta nueva). Ver
@@ -64,21 +65,39 @@ nav_order: 1.5
 
 - **Pantalla "Widgets" centralizada**: lista Chat, Encuesta y Música en un
   solo lugar, cada uno con un toggle ON/OFF y un botón "Mover posición" que
-  abre su pantalla de arrastre correspondiente. Accesible desde el buscador
-  de `/nexuschat` (palabra clave "widgets").
+  abre su pantalla de arrastre correspondiente. Accesible desde el botón
+  junto a la sección OVERLAY de la config principal, o desde el buscador de
+  `/nexuschat` (palabra clave "widgets").
 
 ## Widget de música "now playing"
 
 - **Nuevo widget que muestra qué estás escuchando**: portada, título,
-  artista y barra de progreso, compatible con **Spotify de escritorio**,
+  artista(s) y barra de progreso, compatible con **Spotify de escritorio**,
   **YouTube en cualquier navegador** (Chrome/Edge/Firefox) y **YouTube
   Music** — todo con un solo mecanismo (lee la sesión de medios activa de
   Windows vía System Media Transport Controls), sin necesitar cuentas ni
-  API keys de ningún servicio.
+  API keys de ningún servicio para el uso básico.
 - **Dos estilos**: barra compacta horizontal, o tarjeta expandida con
   "waveform" decorativo (puramente visual, no reactivo al audio real) +
-  tiempo transcurrido/total. Se elige y se posiciona desde la pantalla
-  dedicada del widget (panel **Widgets** → Música → "Mover posición").
+  tiempo transcurrido/total. Ambos con **ancho** y **tema de color**
+  configurables (varios presets, incluye uno estilo Spotify). Se elige y se
+  posiciona desde la pantalla dedicada del widget (panel **Widgets** →
+  Música → "Mover posición").
+- **Más rápido y estable**: el sondeo de Windows ahora usa un proceso
+  persistente en vez de reiniciar PowerShell en cada consulta, por lo que
+  refleja cambios de canción mucho más rápido; y ya no desaparece de golpe
+  si una lectura puntual falla (espera unos segundos antes de ocultarse).
+- **Todos los artistas de la canción**: el estilo expandido ahora envuelve
+  el nombre del/los artista(s) en hasta 2 líneas en vez de recortarlo a uno
+  solo.
+- **Conexión opcional con Spotify** (botón "🎵 Conectar Spotify" dentro de
+  la pantalla de posición del widget, o buscador → "Spotify"): si conectás
+  tu cuenta, el widget usa la API oficial de Spotify —lista completa de
+  artistas y portada en mejor calidad— mientras Spotify sea la app activa.
+  Requiere registrar tu propia app en
+  [developer.spotify.com](https://developer.spotify.com/) con el Redirect
+  URI que te muestra la pantalla de conexión. Sin esto, el widget sigue
+  funcionando igual solo con los datos que da Windows.
 - **Solo Windows**: en macOS/Linux el widget simplemente no se activa (no
   hay error ni crash), ya que la API que lee "qué se está reproduciendo" es
   exclusiva de Windows.
@@ -144,3 +163,5 @@ nav_order: 1.5
   conectadas, y el `mod.log` completo adjunto como archivo (no solo un
   extracto). Cooldown de 60s entre envíos para evitar spam. Ver
   [Comandos y Keybinds](comandos.html#comandos-de-cliente).
+- **Botón "🐞" en la pantalla principal**: abre una ventanita para escribir y
+  enviar un reporte sin tener que escribir el comando a mano.

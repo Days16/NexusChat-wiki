@@ -79,12 +79,13 @@ Controla **cómo** se ve y se comporta el chat en pantalla.
 |---|---|---|---|
 | `x`, `y` | `float` | `10.0`, `200.0` | Posición del overlay en píxeles. |
 | `pollX`, `pollY` | `float` | `10.0`, `178.0` | Posición de la barra de encuesta/predicción de Twitch, independiente del chat (`pollY` es su borde inferior). Se edita arrastrando en la pantalla **Posición de la Encuesta** (buscador de `/nexuschat`, palabra clave "poll"/"encuesta"). Ver también [Comandos → `/nexuschat poll dismiss`](comandos.html). |
+| `pollWidth` | `int` | `320` | Anchura de la encuesta/predicción, independiente de `width` (chat). Botones `-`/`+` en la misma pantalla de posición. |
 | `pollWidgetEnabled` | `bool` | `true` | Interruptor general de la encuesta/predicción. Si es `false`, nunca se dibuja aunque Twitch tenga una activa. Se edita desde el panel **Widgets**. |
 | `music.enabled` | `bool` | `false` | Activa el widget "now playing" (ver [Novedades 1.0](novedades-1.0.html#widget-de-música-now-playing)). Se edita desde el panel **Widgets**. |
 | `music.x`, `music.y` | `float` | `10.0`, `240.0` | Posición del widget de música. Se edita arrastrando en la pantalla **Posición de la Música**. |
-| `music.width` | `int` | `280` | Anchura del widget. |
-| `music.style` | enum | `COMPACT` | `COMPACT` (barra) o `EXPANDED` (tarjeta con waveform). Se cicla desde la pantalla de posición del widget. |
-| `music.accentColor` / `music.backgroundColor` | `int` (RGB) | `0xFF7A1A` / `0x3E5B34` | Colores de acento y fondo del widget de música. |
+| `music.width` | `int` | `280` | Anchura del widget. Botones `-`/`+` en la pantalla de posición. |
+| `music.style` | enum | `COMPACT` | `COMPACT` (barra) o `EXPANDED` (tarjeta con waveform + hasta 2 líneas de artista). Se cicla desde la pantalla de posición del widget. |
+| `music.accentColor` / `music.backgroundColor` | `int` (RGB) | `0xFF7A1A` / `0x3E5B34` | Colores de acento y fondo del widget de música. Se cambian con el botón "Tema" (cicla varios presets: Sunset, Spotify, Morado, Océano, Mono) en la pantalla de posición — no hay picker de color libre. |
 | `music.pollIntervalSec` | `int` | `2` | Cada cuántos segundos se consulta la sesión de medios de Windows (SMTC). |
 | `width` | `int` | `320` | Anchura del panel. |
 | `opacity` | `float` | `0.65` | Opacidad del fondo `[0.0, 1.0]`. |
@@ -198,6 +199,19 @@ Ver [OBS](obs.html) para más detalle.
 | `streamlabs.token` | Socket API Token de Streamlabs (Settings → API Tokens). Se cifra en disco. |
 | `streamElements.enabled` | `true` para conectar con StreamElements al arrancar. |
 | `streamElements.jwtToken` | JWT Token de StreamElements (Account → Show secrets). Se cifra en disco. |
+
+## Sección `spotify` (opcional, para el widget de música)
+
+| Campo | Descripción |
+|---|---|
+| `clientId` | Client ID de tu propia app registrada en [developer.spotify.com](https://developer.spotify.com/). |
+| `accessToken` / `refreshToken` | Tokens OAuth (Authorization Code + PKCE). Se cifran en disco; se refrescan solos. |
+| `expiresAtEpochMs` | Vencimiento del access token (uso interno, se refresca automáticamente). |
+
+No hace falta tocar esto a mano — se completa solo al conectar desde la pantalla
+**Spotify** (buscador de `/nexuschat`, o botón "🎵 Conectar Spotify" dentro de la
+pantalla de posición del widget de música). Ver
+[Novedades 1.0](novedades-1.0.html#widget-de-música-now-playing).
 
 Ver [Alertas Streamlabs/StreamElements](alertas.html) para más detalle.
 

@@ -1,9 +1,9 @@
 ---
-title: Novedades 1.1
+title: Novedades 1.0
 nav_order: 1.5
 ---
 
-# Novedades de la 1.1
+# Novedades de la 1.0
 {: .no_toc }
 
 ## Tabla de contenido
@@ -15,10 +15,10 @@ nav_order: 1.5
 ---
 
 {: .note }
-> Esta página resume lo añadido en NexusChat 1.1 respecto a la 1.0 beta, de
-> cara a quien ya conocía versiones anteriores del mod. Se irá actualizando
-> según avance el desarrollo — si algo de aquí no coincide con lo que ves en
-> el juego, confía en el comportamiento real y avisa para corregir la página.
+> Esta página resume lo añadido en NexusChat 1.0 (release), de cara a quien ya
+> conocía versiones anteriores del mod (1.0 beta). Se irá actualizando según
+> avance el desarrollo — si algo de aquí no coincide con lo que ves en el
+> juego, confía en el comportamiento real y avisa para corregir la página.
 
 ## Pantalla "Novedades" al actualizar
 
@@ -59,6 +59,29 @@ nav_order: 1.5
   mensajes se etiquetan con `[canal]` en el overlay y quedan marcados como
   "restringidos" en el menú de moderación (algunas acciones solo aplican al
   canal principal). Ver [Plataformas → Twitch](plataformas.html#twitch).
+
+## Panel de Widgets
+
+- **Pantalla "Widgets" centralizada**: lista Chat, Encuesta y Música en un
+  solo lugar, cada uno con un toggle ON/OFF y un botón "Mover posición" que
+  abre su pantalla de arrastre correspondiente. Accesible desde el buscador
+  de `/nexuschat` (palabra clave "widgets").
+
+## Widget de música "now playing"
+
+- **Nuevo widget que muestra qué estás escuchando**: portada, título,
+  artista y barra de progreso, compatible con **Spotify de escritorio**,
+  **YouTube en cualquier navegador** (Chrome/Edge/Firefox) y **YouTube
+  Music** — todo con un solo mecanismo (lee la sesión de medios activa de
+  Windows vía System Media Transport Controls), sin necesitar cuentas ni
+  API keys de ningún servicio.
+- **Dos estilos**: barra compacta horizontal, o tarjeta expandida con
+  "waveform" decorativo (puramente visual, no reactivo al audio real) +
+  tiempo transcurrido/total. Se elige y se posiciona desde la pantalla
+  dedicada del widget (panel **Widgets** → Música → "Mover posición").
+- **Solo Windows**: en macOS/Linux el widget simplemente no se activa (no
+  hay error ni crash), ya que la API que lee "qué se está reproduciendo" es
+  exclusiva de Windows.
 
 ## Reconexión y estabilidad
 

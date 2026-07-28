@@ -47,11 +47,15 @@ del proyecto, que en algunos puntos había quedado desactualizada).
   modo "Solo mi equipo", multi-canal por plataforma, reintentos con backoff
   visibles, marcador de mensajes nuevos, vista previa de emote,
   confirmación antes de banear, cifrado de credenciales en disco. Ver
-  [Novedades 1.1](novedades-1.1.html) para el detalle completo.
+  [Novedades 1.0](novedades-1.0.html) para el detalle completo.
 - Reporte de bugs (`/nexuschat report <mensaje>`) directo al Discord del
   autor, con `mod.log` completo adjunto y datos de diagnóstico automáticos.
 - Pantalla **"🎉 Novedades"** automática al abrir `/nexuschat` tras
   actualizar, con el resumen de cambios de esa versión.
+- **Panel de Widgets** centralizado (Chat/Encuesta/Música: toggle + mover
+  posición) y **widget de música "now playing"** (Spotify/YouTube/YouTube
+  Music vía SMTC, solo Windows, dos estilos). Ver
+  [Novedades 1.0](novedades-1.0.html) para el detalle completo.
 - OAuth de Twitch: Device Code Flow + Authorization Code con PKCE, Client ID
   embebido propio como fallback.
 - Modo streamer (oculta tokens/cookies en las pantallas de configuración).

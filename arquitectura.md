@@ -21,34 +21,46 @@ funcionamiento interno.
 
 ```
 com.nexuschat
-├── NexusChat              · ModInitializer (común, registra comandos de servidor)
-├── NexusChatClient        · ClientModInitializer (HUD, keybinds, tick de cliente)
+├── NexusChat              · ModInitializer (común: carga la config, arranca el hot-reload)
+├── NexusChatClient        · ClientModInitializer (HUD, keybinds, tick de cliente, registra comandos)
 ├── NexusChatConstants      · Client ID de Twitch embebido (ofuscado con XOR)
 ├── chat/                  · Dispatcher, cola de mensajes, filtros
-├── command/               · Comandos de servidor y de cliente
-├── config/                · POJOs de Gson + ConfigManager (hot-reload, perfiles)
+├── command/               · Comandos — todos client-side (ver nota más abajo)
+├── config/                · POJOs de Gson + ConfigManager (hot-reload, perfiles, cifrado de secretos)
 ├── keybind/                · Keybinds configurables
 ├── mixin/                  · ChatScreenScrollMixin (intercepta scroll/click/right-click del chat vanilla)
 ├── model/                  · Records inmutables (UnifiedChatMessage, MessageSegment, ...)
 ├── platform/                · Un cliente por plataforma
-│   ├── twitch/              · IRC + OAuth (Device Code + PKCE) + acciones de moderación (Helix)
+│   ├── twitch/              · IRC + OAuth (Device Code + PKCE) + acciones de moderación (Helix) + polling de encuestas
 │   ├── kick/                 · WebSocket Pusher + resolución de chatroom
 │   ├── youtube/              · Polling InnerTube
 │   ├── tiktok/                · Adaptador EulerStream + parser + resolución de emotes
-│   └── obs/                  · Cliente OBS-WebSocket
+│   ├── obs/                  · Cliente OBS-WebSocket
+│   └── alerts/                · Puente Streamlabs/StreamElements (Socket.IO), ver [Alertas](alertas.html)
 ├── render/                  · ChatOverlayRenderer, MessageRenderer, EmoteRenderer, BadgeRenderer, ...
-├── screen/                  · Pantallas de configuración (Screen de Minecraft)
+├── report/                  · BugReportSender — `/nexuschat report`, envío a un webhook de Discord
+├── screen/                  · Pantallas de configuración (Screen de Minecraft), incl. WhatsNewScreen
 ├── texture/                 · TextureCache (LRU + liberación GL), TextureFetcher (HTTP + GIF/WebP), TextureDiskCache, RemoteTexture (atlas 2D)
+├── update/                  · WhatsNewLoader — lee `whatsnew.json` empaquetado y decide si mostrar WhatsNewScreen
 ├── util/                    · ColorUtil, EmojiPreprocessor, ThreadUtil, ChatNotifier, TtsUtil, ...
 └── web/                     · Servidor local + asistente de conexión web (`/conectar`)
 ```
+
+{: .note }
+> Todos los comandos (`/nexuschat`, `/conectar`, `simulate`, `profile`, `report`...) se
+> registran vía `ClientCommandRegistrationCallback` en `NexusChatClientCommands.register()`
+> (llamado desde `NexusChatClient`). En algún momento hubo también un árbol registrado del
+> lado servidor con las mismas subrutas `simulate`/`profile` — como Fabric prioriza el árbol
+> client-side para el literal raíz `nexuschat`, esas subrutas nunca eran alcanzables desde el
+> chat y daban `CommandSyntaxException`. Se eliminó el registro servidor: si vas a añadir un
+> comando nuevo, hazlo en `NexusChatClientCommands`, no crees un segundo árbol.
 
 ### Puntos de entrada
 
 | Clase | Rol |
 |---|---|
-| `NexusChat` | `onInitialize` — carga la config, registra comandos de servidor. |
-| `NexusChatClient` | `onInitializeClient` — keybinds, HUD, tick de cliente, conecta plataformas. |
+| `NexusChat` | `onInitialize` — carga la config, arranca el hot-reload. |
+| `NexusChatClient` | `onInitializeClient` — keybinds, HUD, tick de cliente, conecta plataformas, registra comandos. |
 | `PlatformManager` | Singleton que arranca/detiene cada `ChatPlatform`. |
 
 ### Hilos

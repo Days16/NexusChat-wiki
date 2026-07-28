@@ -68,3 +68,9 @@ servidor al que te conectas tenga el mod instalado.
 > Dentro de la pantalla de configuración (`/nexuschat`) hay un botón **[W]**
 > junto al de Modo Streamer, arriba a la derecha, que abre esta wiki
 > directamente en tu navegador.
+
+{: .note }
+> Tras actualizar el mod, la primera vez que abras `/nexuschat` (o pulses
+> **N**) verás una pantalla **"🎉 Novedades"** con un resumen de los cambios
+> de esa versión en vez de la configuración normal. Pulsa **Continuar** (o
+> Esc) para cerrarla — no vuelve a aparecer hasta la siguiente actualización.

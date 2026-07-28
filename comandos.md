@@ -38,10 +38,12 @@ Los comandos `/conectar <plataforma>` abren un **asistente web local**: el
 mod levanta un pequeño servidor en `localhost` y abre tu navegador en un
 panel de conexión guiado, en vez de tener que rellenar el JSON a mano.
 
-## Comandos de servidor (debug)
+## Simulación y perfiles
 
-Registrados también del lado servidor (útil en singleplayer o si quieres
-simular eventos sin depender de la plataforma real):
+Como el resto de comandos de NexusChat, se ejecutan enteramente en el
+cliente (no requieren estar en un servidor con el mod ni permisos de
+operador) — útiles para probar el overlay sin depender de que la
+plataforma real dispare el evento:
 
 | Comando | Descripción |
 |---|---|

@@ -50,6 +50,8 @@ del proyecto, que en algunos puntos había quedado desactualizada).
   [Novedades 1.1](novedades-1.1.html) para el detalle completo.
 - Reporte de bugs (`/nexuschat report <mensaje>`) directo al Discord del
   autor, con `mod.log` completo adjunto y datos de diagnóstico automáticos.
+- Pantalla **"🎉 Novedades"** automática al abrir `/nexuschat` tras
+  actualizar, con el resumen de cambios de esa versión.
 - OAuth de Twitch: Device Code Flow + Authorization Code con PKCE, Client ID
   embebido propio como fallback.
 - Modo streamer (oculta tokens/cookies en las pantallas de configuración).

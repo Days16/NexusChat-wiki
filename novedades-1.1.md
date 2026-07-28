@@ -20,6 +20,16 @@ nav_order: 1.5
 > según avance el desarrollo — si algo de aquí no coincide con lo que ves en
 > el juego, confía en el comportamiento real y avisa para corregir la página.
 
+## Pantalla "Novedades" al actualizar
+
+- Desde la 1.1, la primera vez que abres `/nexuschat` (o pulsas **N**) tras
+  actualizar el mod, se muestra una pantalla de solo lectura
+  ("🎉 Novedades — v...") con el resumen de cambios de esa versión, en vez de
+  la pantalla de configuración normal. Se genera desde un fichero interno del
+  mod (`whatsnew.json`) — no requiere conexión a internet. Pulsa
+  **Continuar** o Esc para cerrarla y pasar a la configuración; no vuelve a
+  aparecer hasta la siguiente actualización con novedades nuevas.
+
 ## Overlay y chat en directo
 
 - **Encuestas y predicciones de Twitch en el overlay**: cuando hay una
@@ -96,7 +106,7 @@ nav_order: 1.5
 - `/nexuschat simulate` y la pantalla **Sesión de Prueba** ahora también
   cubren encuesta, predicción, hype/raid y un mensaje de canal extra, además
   de los ya existentes (chat, sub, donación, recompensa). Ver
-  [Comandos y Keybinds](comandos.html#comandos-de-servidor-debug).
+  [Comandos y Keybinds](comandos.html#simulación-y-perfiles).
 
 ## Internacionalización
 

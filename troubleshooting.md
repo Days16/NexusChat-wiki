@@ -76,6 +76,15 @@ popup solo muestra un aviso y un acceso directo a la pantalla de conexión.
 - Prueba primero con el botón **▶ Probar voz** para descartar problemas de
   voces SAPI5 del sistema operativo.
 
+## El TTS se corta a mitad de un mensaje largo
+
+Corregido: el proceso de síntesis de voz (PowerShell/SAPI5 en Windows)
+esperaba una confirmación con un tiempo límite fijo demasiado corto para
+frases largas, y las cortaba a media lectura interpretando la síntesis en
+curso como un proceso colgado. El tiempo de espera ahora escala con la
+longitud del texto. Si lo sigues viendo, [reporta el bug](#reportar-un-bug)
+con el mensaje exacto que causó el corte.
+
 ## Errores de instalador de Windows (2503/2502) al instalar herramientas relacionadas
 
 Si usas un build de Windows no oficial ("AIO"/modificado), el subsistema de
@@ -87,7 +96,14 @@ MSI.
 
 ## Reportar un bug
 
-Incluye siempre:
+La forma más rápida es el comando `/nexuschat report <mensaje>` (ver
+[Comandos y Keybinds](comandos.html#comandos-de-cliente)): envía tu mensaje
+directo al Discord del autor del mod, adjuntando automáticamente el
+`mod.log` completo y datos de diagnóstico (versión del mod/Minecraft/Fabric,
+SO, perfil de overlay activo, plataformas conectadas). Cooldown de 60s entre
+envíos.
+
+Si prefieres abrir un issue manualmente en su lugar, incluye siempre:
 
 1. Versión del mod, de Fabric Loader y de Fabric API.
 2. El log completo (`logs/latest.log`) con `debugLogging=true` activado.

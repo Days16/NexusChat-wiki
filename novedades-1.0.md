@@ -36,11 +36,12 @@ nav_order: 1.5
   encuesta o predicción activa en tu canal, aparece una barra con las
   opciones y porcentajes directamente sobre el HUD, con un breve fade al
   cerrarse. Sondeo automático cada 30s (`TwitchPollPoller`).
-- **Posición y ancho de la encuesta/predicción configurables**: ya no queda
-  fija pegada encima del chat ni comparte el ancho del chat — tiene su propia
-  posición y tamaño (`pollX`/`pollY`/`pollWidth`) que se ajustan desde una
-  pantalla dedicada (buscador de `/nexuschat`, palabra clave "poll"/"encuesta").
-  Ver [Configuración → sección `overlay`](configuracion.html#sección-overlay).
+- **Posición, ancho y escala de la encuesta/predicción configurables**: ya no
+  queda fija pegada encima del chat ni comparte el tamaño del chat — tiene su
+  propia posición, ancho y escala (`pollX`/`pollY`/`pollWidth`/`pollScale`)
+  que se ajustan desde una pantalla dedicada (buscador de `/nexuschat`,
+  palabra clave "poll"/"encuesta"). Ver
+  [Configuración → sección `overlay`](configuracion.html#sección-overlay).
 - **Comando `/nexuschat poll dismiss`**: quita manualmente del overlay la
   encuesta o predicción visible en ese momento. Si sigue activa en Twitch, no
   reaparece hasta que cambie de título (empiece una encuesta nueva). Ver
@@ -79,10 +80,13 @@ nav_order: 1.5
   API keys de ningún servicio para el uso básico.
 - **Dos estilos**: barra compacta horizontal, o tarjeta expandida con
   "waveform" decorativo (puramente visual, no reactivo al audio real) +
-  tiempo transcurrido/total. Ambos con **ancho** y **tema de color**
-  configurables (varios presets, incluye uno estilo Spotify). Se elige y se
-  posiciona desde la pantalla dedicada del widget (panel **Widgets** →
-  Música → "Mover posición").
+  tiempo transcurrido/total. Ambos con **ancho**, **tamaño (escala)** y
+  **tema de color** configurables (varios presets, incluye uno estilo
+  Spotify y uno de blanco y negro). Se elige y se posiciona desde la
+  pantalla dedicada del widget (panel **Widgets** → Música →
+  "Mover posición"). Si los colores configurados quedaran sin contraste por
+  algún motivo, el widget cae automáticamente a blanco sobre negro en vez de
+  verse ilegible.
 - **Más rápido y estable**: el sondeo de Windows ahora usa un proceso
   persistente en vez de reiniciar PowerShell en cada consulta, por lo que
   refleja cambios de canción mucho más rápido; y ya no desaparece de golpe

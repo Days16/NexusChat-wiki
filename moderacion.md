@@ -44,7 +44,7 @@ sin token OAuth.
 
 {: .note }
 > Si sigues varios canales de Twitch a la vez (ver
-> [multi-canal por plataforma](novedades-1.0-beta.html#overlay-y-chat-en-directo)),
+> [multi-canal por plataforma](novedades-1.1.html#overlay-y-chat-en-directo)),
 > los mensajes de canales adicionales aparecen como **restringidos** en este
 > menú: algunas acciones de moderación solo tienen sentido sobre el canal
 > principal configurado en `twitch.channelName`.

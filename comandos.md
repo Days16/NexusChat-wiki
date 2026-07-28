@@ -31,6 +31,8 @@ permisos de operador.
 | `/nexuschat test` | Inyecta 5 mensajes de prueba en el overlay. |
 | `/nexuschat export` | Exporta los últimos 100 mensajes a `run/nexuschat/transcripts/`. |
 | `/nexuschat export <n>` | Exporta los últimos `n` mensajes (1–100000). |
+| `/nexuschat report <mensaje>` | Envía un reporte de bug al Discord del autor (webhook): tu mensaje, versión del mod/Minecraft/Fabric, SO, perfil y plataformas conectadas, más el `mod.log` completo adjunto como archivo. Cooldown de 60s entre envíos. |
+| `/nexuschat poll dismiss` | Quita del overlay la encuesta/predicción de Twitch visible en ese momento. Si sigue activa en Twitch, no vuelve a aparecer hasta que cambie de título (empiece una nueva). |
 
 Los comandos `/conectar <plataforma>` abren un **asistente web local**: el
 mod levanta un pequeño servidor en `localhost` y abre tu navegador en un

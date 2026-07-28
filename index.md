@@ -14,7 +14,7 @@ Overlay de chat multi-plataforma para Minecraft (Fabric) que unifica **Twitch, K
 [Descargar en Modrinth](https://modrinth.com/mod/nexuschat){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Instalación](instalacion.html){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Configuración](configuracion.html){: .btn .fs-5 .mb-4 .mb-md-0 }
-[Novedades 1.0 beta](novedades-1.0-beta.html){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Novedades 1.1](novedades-1.1.html){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -36,7 +36,7 @@ servidor al que te conectas tenga el mod instalado.
 - **Integración con OBS** vía OBS-WebSocket: cambia de escena desde el chat con un comando (`!escena`). Ver [OBS](obs.html).
 - **Puente de alertas Streamlabs/StreamElements**: dona sin equivalente nativo en el chat (PayPal, tips directos) llegan al overlay igual que cualquier otra donación. Ver [Alertas](alertas.html).
 - **Encuestas y predicciones de Twitch** en vivo sobre el overlay, y un indicador de **hype/raid** cuando el ritmo de mensajes se dispara.
-- **Modo "Solo mi equipo"** y **multi-canal por plataforma** (sigue varios canales de Twitch a la vez). Ver [Novedades 1.0 beta](novedades-1.0-beta.html).
+- **Modo "Solo mi equipo"** y **multi-canal por plataforma** (sigue varios canales de Twitch a la vez). Ver [Novedades 1.1](novedades-1.1.html).
 - **Modos de visualización**: `FULL`, `COMPACT`, `MINIMAL`.
 - **7 temas de color** (incluye un tema de alto contraste para accesibilidad) y colores de fondo por rol (streamer, mod, VIP, sub).
 - **Menciones resaltadas**, notificaciones de sub/donación con sonido configurable.

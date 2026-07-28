@@ -78,6 +78,7 @@ Controla **cómo** se ve y se comporta el chat en pantalla.
 | Campo | Tipo | Default | Descripción |
 |---|---|---|---|
 | `x`, `y` | `float` | `10.0`, `200.0` | Posición del overlay en píxeles. |
+| `pollX`, `pollY` | `float` | `10.0`, `178.0` | Posición de la barra de encuesta/predicción de Twitch, independiente del chat (`pollY` es su borde inferior). Se edita arrastrando en la pantalla **Posición de la Encuesta** (buscador de `/nexuschat`, palabra clave "poll"/"encuesta"). Ver también [Comandos → `/nexuschat poll dismiss`](comandos.html). |
 | `width` | `int` | `320` | Anchura del panel. |
 | `opacity` | `float` | `0.65` | Opacidad del fondo `[0.0, 1.0]`. |
 | `maxMessages` | `int` | `6` | Nº máximo de mensajes visibles a la vez. |

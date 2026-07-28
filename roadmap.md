@@ -42,11 +42,14 @@ del proyecto, que en algunos puntos había quedado desactualizada).
 - **Puente de alertas Streamlabs/StreamElements** para donaciones sin
   equivalente nativo en el chat. Ver [Alertas](alertas.html).
 - **Miniatura de stream en directo** sobre el overlay.
-- Encuestas y predicciones de Twitch en el overlay, indicador de hype/raid,
+- Encuestas y predicciones de Twitch en el overlay (posición configurable,
+  comando `/nexuschat poll dismiss` para quitarlas), indicador de hype/raid,
   modo "Solo mi equipo", multi-canal por plataforma, reintentos con backoff
   visibles, marcador de mensajes nuevos, vista previa de emote,
   confirmación antes de banear, cifrado de credenciales en disco. Ver
-  [Novedades 1.0 beta](novedades-1.0-beta.html) para el detalle completo.
+  [Novedades 1.1](novedades-1.1.html) para el detalle completo.
+- Reporte de bugs (`/nexuschat report <mensaje>`) directo al Discord del
+  autor, con `mod.log` completo adjunto y datos de diagnóstico automáticos.
 - OAuth de Twitch: Device Code Flow + Authorization Code con PKCE, Client ID
   embebido propio como fallback.
 - Modo streamer (oculta tokens/cookies en las pantallas de configuración).

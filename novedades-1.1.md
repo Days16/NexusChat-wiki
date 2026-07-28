@@ -1,9 +1,9 @@
 ---
-title: Novedades 1.0 beta
+title: Novedades 1.1
 nav_order: 1.5
 ---
 
-# Novedades de la 1.0 beta
+# Novedades de la 1.1
 {: .no_toc }
 
 ## Tabla de contenido
@@ -15,10 +15,10 @@ nav_order: 1.5
 ---
 
 {: .note }
-> Esta página resume lo añadido en la beta actual de NexusChat 1.0, de cara a
-> quien ya conocía versiones anteriores del mod. Se irá actualizando según
-> avance la beta — si algo de aquí no coincide con lo que ves en el juego,
-> confía en el comportamiento real y avisa para corregir la página.
+> Esta página resume lo añadido en NexusChat 1.1 respecto a la 1.0 beta, de
+> cara a quien ya conocía versiones anteriores del mod. Se irá actualizando
+> según avance el desarrollo — si algo de aquí no coincide con lo que ves en
+> el juego, confía en el comportamiento real y avisa para corregir la página.
 
 ## Overlay y chat en directo
 
@@ -26,6 +26,14 @@ nav_order: 1.5
   encuesta o predicción activa en tu canal, aparece una barra con las
   opciones y porcentajes directamente sobre el HUD, con un breve fade al
   cerrarse. Sondeo automático cada 30s (`TwitchPollPoller`).
+- **Posición de la encuesta/predicción configurable**: ya no queda fija
+  pegada encima del chat — tiene su propia posición (`pollX`/`pollY`) que se
+  arrastra desde una pantalla dedicada (buscador de `/nexuschat`, palabra
+  clave "poll"/"encuesta"). Ver [Configuración → sección `overlay`](configuracion.html#sección-overlay).
+- **Comando `/nexuschat poll dismiss`**: quita manualmente del overlay la
+  encuesta o predicción visible en ese momento. Si sigue activa en Twitch, no
+  reaparece hasta que cambie de título (empiece una encuesta nueva). Ver
+  [Comandos y Keybinds](comandos.html#comandos-de-cliente).
 - **Modo "Solo mi equipo"**: filtra el overlay para mostrar únicamente
   mensajes de una lista de confianza (pantalla **Equipo**, separada de los
   grupos de usuarios especiales existentes). Toggle rápido desde
@@ -94,3 +102,12 @@ nav_order: 1.5
 
 - Trabajo en curso de traducción (`es_es` / `en_us`) para toda la interfaz;
   la pantalla principal de configuración ya está completamente traducida.
+
+## Soporte y reportes
+
+- **Comando `/nexuschat report <mensaje>`**: envía un reporte de bug directo
+  al Discord del autor del mod. Incluye tu mensaje, versión del mod/Minecraft/
+  Fabric, sistema operativo, perfil de overlay activo, plataformas
+  conectadas, y el `mod.log` completo adjunto como archivo (no solo un
+  extracto). Cooldown de 60s entre envíos para evitar spam. Ver
+  [Comandos y Keybinds](comandos.html#comandos-de-cliente).

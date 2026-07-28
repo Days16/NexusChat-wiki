@@ -98,6 +98,11 @@ nav_order: 1.5
   [developer.spotify.com](https://developer.spotify.com/) con el Redirect
   URI que te muestra la pantalla de conexión. Sin esto, el widget sigue
   funcionando igual solo con los datos que da Windows.
+- **Detección mejorada de la sesión activa**: Windows a veces se queda
+  "pegado" a la última app con la que interactuaste (por ejemplo Spotify en
+  pausa) en vez de mostrar lo que realmente suena en el navegador; ahora se
+  revisan todas las sesiones de medios activas y se prioriza la que esté de
+  verdad en reproducción.
 - **Solo Windows**: en macOS/Linux el widget simplemente no se activa (no
   hay error ni crash), ya que la API que lee "qué se está reproduciendo" es
   exclusiva de Windows.

@@ -107,6 +107,10 @@ nav_order: 1.5
   pausa) en vez de mostrar lo que realmente suena en el navegador; ahora se
   revisan todas las sesiones de medios activas y se prioriza la que esté de
   verdad en reproducción.
+- **Barra de progreso arreglada**: Windows no actualiza la posición de
+  reproducción en tiempo real por sí solo (sobre todo en navegadores), así
+  que antes la barra podía quedarse clavada entre sondeos; ahora el mod
+  interpola el tiempo transcurrido y avanza de forma fluida.
 - **Solo Windows**: en macOS/Linux el widget simplemente no se activa (no
   hay error ni crash), ya que la API que lee "qué se está reproduciendo" es
   exclusiva de Windows.

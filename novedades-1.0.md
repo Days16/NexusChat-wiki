@@ -1,9 +1,9 @@
 ---
-title: Novedades 1.0
+title: Novedades 1.0.1
 nav_order: 1.5
 ---
 
-# Novedades de la 1.0
+# Novedades de la 1.0.1
 {: .no_toc }
 
 ## Tabla de contenido
@@ -111,6 +111,10 @@ nav_order: 1.5
   reproducción en tiempo real por sí solo (sobre todo en navegadores), así
   que antes la barra podía quedarse clavada entre sondeos; ahora el mod
   interpola el tiempo transcurrido y avanza de forma fluida.
+- **Títulos largos ya no se cortan**: si el título de la canción/video no
+  entra en el ancho configurado del widget, en vez de recortarse con "…" se
+  desliza de un lado a otro (efecto "marquee"), tanto en el estilo compacto
+  como en el expandido, hasta que se termina de leer completo.
 - **Solo Windows**: en macOS/Linux el widget simplemente no se activa (no
   hay error ni crash), ya que la API que lee "qué se está reproduciendo" es
   exclusiva de Windows.

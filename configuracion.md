@@ -82,13 +82,17 @@ Controla **cómo** se ve y se comporta el chat en pantalla.
 | `pollWidth` | `int` | `320` | Anchura de la encuesta/predicción, independiente de `width` (chat). Botones `-`/`+` en la misma pantalla de posición. |
 | `pollScale` | `float` | `1.0` | Escala de la encuesta/predicción `[0.5, 3.0]`, independiente de `scale` (chat). Botones `-`/`+` en la misma pantalla de posición. |
 | `pollWidgetEnabled` | `bool` | `true` | Interruptor general de la encuesta/predicción. Si es `false`, nunca se dibuja aunque Twitch tenga una activa. Se edita desde el panel **Widgets**. |
-| `music.enabled` | `bool` | `false` | Activa el widget "now playing" (ver [Novedades 1.0.1](novedades-1.0.html#widget-de-música-now-playing)). Se edita desde el panel **Widgets**. |
+| `music.enabled` | `bool` | `false` | Activa el widget "now playing" (ver [Novedades 1.2](novedades-1.0.html#widget-de-música-now-playing)). Se edita desde el panel **Widgets**. |
 | `music.x`, `music.y` | `float` | `10.0`, `240.0` | Posición del widget de música. Se edita arrastrando en la pantalla **Posición de la Música**. |
 | `music.width` | `int` | `280` | Anchura del widget. Botones `-`/`+` en la pantalla de posición. |
 | `music.scale` | `float` | `1.0` | Escala del widget de música `[0.5, 3.0]`, independiente de `scale` (chat). Botones `-`/`+` en la pantalla de posición. |
 | `music.style` | enum | `COMPACT` | `COMPACT` (barra) o `EXPANDED` (tarjeta con waveform + hasta 2 líneas de artista). Se cicla desde la pantalla de posición del widget. |
 | `music.accentColor` / `music.backgroundColor` | `int` (RGB) | `0xFF7A1A` / `0x3E5B34` | Colores de acento y fondo del widget de música. Se cambian con el botón "Tema" (cicla varios presets: Sunset, Spotify, Morado, Océano, Blanco y negro) en la pantalla de posición — no hay picker de color libre. Si por algún motivo quedan sin contraste (iguales), el widget usa blanco sobre negro automáticamente. |
 | `music.pollIntervalSec` | `int` | `2` | Cada cuántos segundos se consulta la sesión de medios de Windows (SMTC). |
+| `viewCounter.enabled` | `bool` | `false` | Activa el widget contador de vistas (suma de espectadores). Se edita desde el panel **Widgets**. |
+| `viewCounter.x`, `viewCounter.y` | `float` | `10.0`, `300.0` | Posición del widget. Se edita arrastrando en la pantalla **Posición del Contador de Vistas**. |
+| `viewCounter.scale` | `float` | `1.0` | Escala del widget `[0.5, 3.0]`, independiente de `scale` (chat). Botones `-`/`+` en la pantalla de posición. |
+| `viewCounter.twitch` / `.kick` / `.youtube` / `.tiktok` | `bool` | `true` (las 4) | Qué plataformas suman al total mostrado — solo cuentan las que estén conectadas y marcadas. Toggles ON/OFF en la pantalla de posición. |
 | `width` | `int` | `320` | Anchura del panel. |
 | `opacity` | `float` | `0.65` | Opacidad del fondo `[0.0, 1.0]`. |
 | `maxMessages` | `int` | `6` | Nº máximo de mensajes visibles a la vez. |
@@ -213,7 +217,7 @@ Ver [OBS](obs.html) para más detalle.
 No hace falta tocar esto a mano — se completa solo al conectar desde la pantalla
 **Spotify** (buscador de `/nexuschat`, o botón "🎵 Conectar Spotify" dentro de la
 pantalla de posición del widget de música). Ver
-[Novedades 1.0.1](novedades-1.0.html#widget-de-música-now-playing).
+[Novedades 1.2](novedades-1.0.html#widget-de-música-now-playing).
 
 Ver [Alertas Streamlabs/StreamElements](alertas.html) para más detalle.
 

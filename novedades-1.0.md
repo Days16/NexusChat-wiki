@@ -1,9 +1,9 @@
 ---
-title: Novedades 1.0.1
+title: Novedades 1.2
 nav_order: 1.5
 ---
 
-# Novedades de la 1.0.1
+# Novedades de la 1.2
 {: .no_toc }
 
 ## Tabla de contenido
@@ -64,11 +64,19 @@ nav_order: 1.5
 
 ## Panel de Widgets
 
-- **Pantalla "Widgets" centralizada**: lista Chat, Encuesta y Música en un
-  solo lugar, cada uno con un toggle ON/OFF y un botón "Mover posición" que
-  abre su pantalla de arrastre correspondiente. Accesible desde el botón
-  junto a la sección OVERLAY de la config principal, o desde el buscador de
-  `/nexuschat` (palabra clave "widgets").
+- **Pantalla "Widgets" centralizada**: lista Chat, Encuesta, Música y
+  Contador de vistas en un solo lugar, cada uno con un toggle ON/OFF y un
+  botón "Mover posición" que abre su pantalla de arrastre correspondiente.
+  Accesible desde el botón junto a la sección OVERLAY de la config
+  principal, o desde el buscador de `/nexuschat` (palabra clave "widgets").
+
+## Widget "Contador de vistas"
+
+- **Suma los espectadores de varias plataformas en un solo número**: elegí
+  qué plataformas cuentan (Twitch, Kick, YouTube, TikTok) desde su pantalla
+  de posición (panel **Widgets** → Vistas → "Mover posición") — solo suman
+  las que estén conectadas y marcadas. Tiene su propia posición y tamaño
+  (escala) configurables, igual que los demás widgets.
 
 ## Widget de música "now playing"
 
@@ -124,6 +132,14 @@ nav_order: 1.5
 - **Reintentos con backoff visibles**: si una plataforma se desconecta, el
   overlay muestra un indicador con el número de intento y los segundos
   restantes hasta el siguiente reintento, en vez de fallar en silencio.
+- **TikTok**: arreglado un error de timeout (`HttpTimeoutException`) que
+  podía impedir conectar, causado por un componente HTTP interno
+  incompatible con el entorno de Minecraft.
+- **YouTube**: cuando no hay ningún directo activo en el canal, ahora avisa
+  una sola vez ("sin directo activo, reintentando en segundo plano") en vez
+  de repetir el mismo error en cada ciclo de reintento.
+- **TTS**: arreglado que el modo "Todo el chat" de una plataforma pudiera
+  revertirse solo al reiniciar el juego o recargar la configuración.
 
 ## Herramientas de escritura y moderación
 
@@ -182,3 +198,6 @@ nav_order: 1.5
   [Comandos y Keybinds](comandos.html#comandos-de-cliente).
 - **Botón "🐞" en la pantalla principal**: abre una ventanita para escribir y
   enviar un reporte sin tener que escribir el comando a mano.
+- **Botón "💬" en la pantalla principal**: te lleva al servidor de Discord
+  del mod (comunidad y soporte). Si el navegador no se abre solo, aparece un
+  enlace clicable en el chat como alternativa.

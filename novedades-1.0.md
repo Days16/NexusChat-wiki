@@ -15,8 +15,7 @@ nav_order: 1.5
 ---
 
 {: .note }
-> Esta página resume lo añadido en NexusChat 1.0 (release), de cara a quien ya
-> conocía versiones anteriores del mod (1.0 beta). Se irá actualizando según
+> Esta página resume lo añadido en NexusChat 1.0 (release). Se irá actualizando según
 > avance el desarrollo — si algo de aquí no coincide con lo que ves en el
 > juego, confía en el comportamiento real y avisa para corregir la página.
 

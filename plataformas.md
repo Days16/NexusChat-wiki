@@ -30,6 +30,8 @@ desde las pantallas de `/nexuschat <plataforma>`.
   token OAuth.
 - **Funciones**:
   - Chat normal, subs (`USERNOTICE`), bits/donaciones, recompensas de canal.
+  - **Follows en el chat** (vía EventSub — ver más abajo, requiere reconectar
+    con el token nuevo).
   - Badges globales y de canal.
   - Emotes nativos de Twitch + 7TV/BTTV/FFZ.
   - Colores de nombre de usuario.
@@ -52,6 +54,14 @@ desde las pantallas de `/nexuschat <plataforma>`.
     también podés pegarlo directamente en el campo **Token** de la pantalla
     y presionar **"Validar token"**.
 
+{: .note }
+> **Follows en el chat**: Twitch dejó de exponerlos por el chat/PubSub
+> normal hace años — NexusChat los recupera vía **EventSub**, que necesita
+> el scope `moderator:read:followers`. Si conectaste tu cuenta antes de esta
+> función, reconectá con el botón **OAuth** una vez más para que el token
+> incluya el permiso nuevo; todo lo demás (chat, moderación, envío de
+> mensajes) sigue funcionando igual sin reconectar.
+
 ### Multi-canal por plataforma
 
 Además del canal principal (`twitch.channelName`), puedes seguir canales de
@@ -66,8 +76,10 @@ sin cambiar de canal.
 ## Kick
 
 - **Transporte**: WebSocket Pusher (`ws-us2.pusher.com`).
-- **Funciones**: chat, subs, hosts, bans, regalos; emotes de Kick + 7TV sobre
-  Kick.
+- **Funciones**: chat, subs, regalos de subs, follows, bans; emotes de Kick +
+  7TV sobre Kick.
+- **Hosts**: se muestran con el mismo estilo visual que un raid (espectadores
+  redirigidos desde otro canal), en vez de mezclarse con las donaciones.
 - **Autenticación**: no requiere login para leer el chat público.
 
 ## YouTube
@@ -75,7 +87,8 @@ sin cambiar de canal.
 - **Transporte**: polling REST sobre InnerTube (API interna de YouTube, cada
   N segundos).
 - **Funciones**: chat en directo, Super Chat (con color y monto), Super
-  Sticker, notificaciones de miembros/suscripciones.
+  Sticker, notificaciones de miembros/suscripciones, regalos de membresía
+  (compra y recepción).
 - **Autenticación**: ninguna — usa InnerTube de forma anónima, **no
   necesitas una API Key de Google**.
 
@@ -115,7 +128,7 @@ en Twitch). Ver [OBS](obs.html).
 
 | Plataforma | ¿Requiere login? | Qué necesitas |
 |---|---|---|
-| Twitch | Opcional (recomendado para moderar/enviar) | Token OAuth con scopes `chat:read chat:edit` |
+| Twitch | Opcional (recomendado para moderar/enviar/ver follows) | Token OAuth (incluye `moderator:read:followers` para follows) |
 | Kick | No | Solo el nombre de canal |
 | YouTube | No | Solo el handle (`@canal`) |
 | TikTok | Sí (servicio externo) | API Key de EulerStream (gratuita) |

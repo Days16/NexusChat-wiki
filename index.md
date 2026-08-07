@@ -14,7 +14,7 @@ Overlay de chat multi-plataforma para Minecraft (Fabric) que unifica **Twitch, K
 [Descargar en Modrinth](https://modrinth.com/mod/nexuschat){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Instalación](instalacion.html){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Configuración](configuracion.html){: .btn .fs-5 .mb-4 .mb-md-0 }
-[Novedades 1.2](novedades-1.0.html){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Novedades 1.3](novedades-1.0.html){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -35,8 +35,9 @@ servidor al que te conectas tenga el mod instalado.
 - **Menú de moderación**: clic derecho sobre un nombre en el overlay para hacer timeout, ban, borrar mensaje, VIP o mod (Twitch, vía Helix API). Ver [Moderación](moderacion.html).
 - **Integración con OBS** vía OBS-WebSocket: cambia de escena desde el chat con un comando (`!escena`). Ver [OBS](obs.html).
 - **Puente de alertas Streamlabs/StreamElements**: dona sin equivalente nativo en el chat (PayPal, tips directos) llegan al overlay igual que cualquier otra donación. Ver [Alertas](alertas.html).
+- **Follows en el chat** de Twitch (vía EventSub) y Kick, regalos de membresía de YouTube. Ver [Novedades 1.3](novedades-1.0.html#alertas-más-parejas-entre-plataformas).
 - **Encuestas y predicciones de Twitch** en vivo sobre el overlay, y un indicador de **hype/raid** cuando el ritmo de mensajes se dispara.
-- **Modo "Solo mi equipo"** y **multi-canal por plataforma** (sigue varios canales de Twitch a la vez). Ver [Novedades 1.2](novedades-1.0.html).
+- **Modo "Solo mi equipo"** y **multi-canal por plataforma** (sigue varios canales de Twitch a la vez). Ver [Novedades 1.3](novedades-1.0.html).
 - **Modos de visualización**: `FULL`, `COMPACT`, `MINIMAL`.
 - **7 temas de color** (incluye un tema de alto contraste para accesibilidad) y colores de fondo por rol (streamer, mod, VIP, sub).
 - **Menciones resaltadas**, notificaciones de sub/donación con sonido configurable.
@@ -46,9 +47,9 @@ servidor al que te conectas tenga el mod instalado.
 - **Envío de mensajes** al chat de la plataforma desde dentro del juego.
 - **Modo streamer**: oculta tokens y datos sensibles en las pantallas de configuración mientras compartes pantalla.
 - **Hot-reload** de la configuración: edita el JSON con el juego abierto y los cambios se aplican al vuelo.
-- **Panel de Widgets**: activa/desactiva y reposiciona Chat, Encuesta, Música y Contador de vistas desde un solo lugar. Ver [Novedades 1.2](novedades-1.0.html#panel-de-widgets).
-- **Widget de música "now playing"**: portada, título, artista y progreso de Spotify/YouTube/YouTube Music (solo Windows), sin cuentas ni API keys, con títulos largos deslizándose en vez de cortarse. Ver [Novedades 1.2](novedades-1.0.html#widget-de-música-now-playing).
-- **Widget contador de vistas**: suma los espectadores de las plataformas que elijas en un solo número. Ver [Novedades 1.2](novedades-1.0.html#widget-contador-de-vistas).
+- **Panel de Widgets**: activa/desactiva y reposiciona Chat, Encuesta, Música y Contador de vistas desde un solo lugar. Ver [Novedades 1.3](novedades-1.0.html#panel-de-widgets).
+- **Widget de música "now playing"**: portada, título, artista y progreso de Spotify/YouTube/YouTube Music (solo Windows), sin cuentas ni API keys, con títulos largos deslizándose en vez de cortarse. Ver [Novedades 1.3](novedades-1.0.html#widget-de-música-now-playing).
+- **Widget contador de vistas**: suma los espectadores de las plataformas que elijas en un solo número. Ver [Novedades 1.3](novedades-1.0.html#widget-contador-de-vistas).
 - **Únete al Discord** del mod con un clic desde la pantalla principal.
 - **Reporte de bugs** in-game (`/nexuschat report`) directo al Discord del autor.
 

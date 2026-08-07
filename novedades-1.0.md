@@ -1,9 +1,9 @@
 ---
-title: Novedades 1.2
+title: Novedades 1.3
 nav_order: 1.5
 ---
 
-# Novedades de la 1.2
+# Novedades de la 1.3
 {: .no_toc }
 
 ## Tabla de contenido
@@ -60,6 +60,25 @@ nav_order: 1.5
   mensajes se etiquetan con `[canal]` en el overlay y quedan marcados como
   "restringidos" en el menú de moderación (algunas acciones solo aplican al
   canal principal). Ver [Plataformas → Twitch](plataformas.html#twitch).
+
+## Alertas más parejas entre plataformas
+
+- **Twitch: follows en el chat**: Twitch dejó de exponer los follows por el
+  chat normal hace años — ahora NexusChat los recupera vía EventSub (un
+  mecanismo aparte, en tiempo real). Requiere reconectar tu cuenta una vez
+  (botón **OAuth** en la pantalla Twitch) para conceder el permiso nuevo
+  (`moderator:read:followers`); sin reconectar, todo lo demás sigue
+  funcionando igual, simplemente no verás follows de Twitch hasta que lo
+  hagas. Ver [Plataformas → Twitch](plataformas.html#twitch).
+- **Kick: follows en el chat**: antes no se mostraban pese a que Kick sí los
+  expone — ya aparecen igual que en las demás plataformas.
+- **Kick: "host" con su propio estilo**: antes un host se mostraba mezclado
+  visualmente con las donaciones (regalos de subs); ahora usa el estilo de
+  raid, ya que conceptualmente es lo mismo (espectadores redirigidos desde
+  otro canal).
+- **YouTube: regalos de membresía**: tanto quien compra regalos de
+  membresía para el chat como quien recibe uno ahora aparecen como
+  suscripción — antes se perdían silenciosamente.
 
 ## Panel de Widgets
 

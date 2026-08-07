@@ -35,12 +35,22 @@ desde las pantallas de `/nexuschat <plataforma>`.
   - Colores de nombre de usuario.
   - Con token: [menú de moderación](moderacion.html) (timeout, ban, borrar
     mensaje, VIP, mod) y envío de mensajes.
-- **Autenticación**: dos flujos disponibles —
-  - **Device Code Flow** (`TwitchDeviceCodeFlow`): sin redirect URI, ideal
-    para no tener que abrir un servidor local.
-  - **Authorization Code + PKCE** (`TwitchOAuthFlow`): abre un servidor local
-    en `127.0.0.1:7654` y tu navegador para autorizar la app.
-  - Sin token configurado, la conexión es de solo lectura.
+- **Autenticación**: sin token configurado, la conexión es de solo lectura —
+  ves el chat pero no podés moderar, enviar mensajes, ni ver el nº de
+  espectadores en el [contador de vistas](novedades-1.0.html#widget-contador-de-vistas).
+  Hay dos formas de conseguir el token, ambas desde la pantalla **Twitch**
+  (buscador de `/nexuschat`, o `/conectar twitch`):
+  - **Botón "OAuth" (recomendado)**: un solo clic. Usa el Device Code Flow —
+    sin necesidad de servidor local ni redirect URI. Te muestra un código
+    corto en pantalla y abre `twitch.tv/activate` en el navegador; pegás el
+    código ahí, autorizás la app, y el token se guarda solo en cuanto Twitch
+    confirma (verás "✓ Autenticado. Reconectando..." en la pantalla).
+  - **Botón "❓ Cómo conseguir token"**: abre un panel web local
+    (`localhost:7654/connect/twitch`, vía el flujo Authorization Code + PKCE)
+    con instrucciones paso a paso — alternativa si el botón OAuth no te
+    funciona por algún motivo. Una vez que tengas un token (`oauth:...`),
+    también podés pegarlo directamente en el campo **Token** de la pantalla
+    y presionar **"Validar token"**.
 
 ### Multi-canal por plataforma
 

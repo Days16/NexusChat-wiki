@@ -47,7 +47,7 @@ del proyecto, que en algunos puntos había quedado desactualizada).
   modo "Solo mi equipo", multi-canal por plataforma, reintentos con backoff
   visibles, marcador de mensajes nuevos, vista previa de emote,
   confirmación antes de banear, cifrado de credenciales en disco. Ver
-  [Novedades 1.3](novedades-1.0.html) para el detalle completo.
+  [Novedades 1.2](novedades-1.0.html) para el detalle completo.
 - Reporte de bugs (`/nexuschat report <mensaje>`) directo al Discord del
   autor, con `mod.log` completo adjunto y datos de diagnóstico automáticos.
 - Pantalla **"🎉 Novedades"** automática al abrir `/nexuschat` tras
@@ -57,7 +57,7 @@ del proyecto, que en algunos puntos había quedado desactualizada).
   (Spotify/YouTube/YouTube Music vía SMTC, solo Windows, dos estilos, con
   títulos largos deslizándose en vez de cortarse) y **widget contador de
   vistas** (suma espectadores de las plataformas elegidas). Ver
-  [Novedades 1.3](novedades-1.0.html) para el detalle completo.
+  [Novedades 1.2](novedades-1.0.html) para el detalle completo.
 - Arreglos de conexión: TikTok (timeout de conexión), YouTube (avisos
   repetidos cuando no hay directo activo), TTS (modo "Todo el chat" que se
   reseteaba solo). Botón "💬" para unirte al Discord del mod desde la
@@ -66,7 +66,7 @@ del proyecto, que en algunos puntos había quedado desactualizada).
   EventSub, requiere reconectar cuenta una vez) y de Kick (antes no se
   mostraban), "host" de Kick con estilo propio de raid en vez de mezclarse
   con donaciones, regalos de membresía de YouTube detectados. Ver
-  [Novedades 1.3](novedades-1.0.html#alertas-más-parejas-entre-plataformas).
+  [Novedades 1.2](novedades-1.0.html#alertas-más-parejas-entre-plataformas).
 - OAuth de Twitch: Device Code Flow + Authorization Code con PKCE, Client ID
   embebido propio como fallback.
 - Modo streamer (oculta tokens/cookies en las pantallas de configuración).

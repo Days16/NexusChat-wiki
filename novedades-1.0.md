@@ -1,9 +1,9 @@
 ---
-title: Novedades 1.3
+title: Novedades 1.2
 nav_order: 1.5
 ---
 
-# Novedades de la 1.3
+# Novedades de la 1.2
 {: .no_toc }
 
 ## Tabla de contenido

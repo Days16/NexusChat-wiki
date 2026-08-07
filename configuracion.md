@@ -82,7 +82,7 @@ Controla **cómo** se ve y se comporta el chat en pantalla.
 | `pollWidth` | `int` | `320` | Anchura de la encuesta/predicción, independiente de `width` (chat). Botones `-`/`+` en la misma pantalla de posición. |
 | `pollScale` | `float` | `1.0` | Escala de la encuesta/predicción `[0.5, 3.0]`, independiente de `scale` (chat). Botones `-`/`+` en la misma pantalla de posición. |
 | `pollWidgetEnabled` | `bool` | `true` | Interruptor general de la encuesta/predicción. Si es `false`, nunca se dibuja aunque Twitch tenga una activa. Se edita desde el panel **Widgets**. |
-| `music.enabled` | `bool` | `false` | Activa el widget "now playing" (ver [Novedades 1.3](novedades-1.0.html#widget-de-música-now-playing)). Se edita desde el panel **Widgets**. |
+| `music.enabled` | `bool` | `false` | Activa el widget "now playing" (ver [Novedades 1.2](novedades-1.0.html#widget-de-música-now-playing)). Se edita desde el panel **Widgets**. |
 | `music.x`, `music.y` | `float` | `10.0`, `240.0` | Posición del widget de música. Se edita arrastrando en la pantalla **Posición de la Música**. |
 | `music.width` | `int` | `280` | Anchura del widget. Botones `-`/`+` en la pantalla de posición. |
 | `music.scale` | `float` | `1.0` | Escala del widget de música `[0.5, 3.0]`, independiente de `scale` (chat). Botones `-`/`+` en la pantalla de posición. |
@@ -217,7 +217,7 @@ Ver [OBS](obs.html) para más detalle.
 No hace falta tocar esto a mano — se completa solo al conectar desde la pantalla
 **Spotify** (buscador de `/nexuschat`, o botón "🎵 Conectar Spotify" dentro de la
 pantalla de posición del widget de música). Ver
-[Novedades 1.3](novedades-1.0.html#widget-de-música-now-playing).
+[Novedades 1.2](novedades-1.0.html#widget-de-música-now-playing).
 
 Ver [Alertas Streamlabs/StreamElements](alertas.html) para más detalle.
 
